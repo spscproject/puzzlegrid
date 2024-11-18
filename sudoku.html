@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="sudoku.css">
+</head>
+<body>
+    <div id="welcome-page" class="page">
+        <h1>Welcome to Sudoku</h1>
+        <button onclick="showLevelSelection()">Start Game</button>
+    </div>
+
+    <div id="level-selection-page" class="page" style="display: none;">
+        <h1>Select Difficulty Level</h1>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('medium')">Medium</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div id="game-page" class="page" style="display: none;">
+        <h1>Sudoku</h1>
+        <div id="board"></div>
+        <div id="buttons">
+            <button onclick="solvePuzzle()">Solve</button>
+            <button onclick="checkSolution()">Check</button>
+            <button onclick="resetPuzzle()">Reset</button>
+        </div>
+    </div>
+
+    <div id="message"></div>
+
+    <script src="sudoku.js"></script>
+</body>
+</html>
+
